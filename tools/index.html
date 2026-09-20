@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>工具：计算器与清单 · 微出国 · 跨境家庭财富</title><meta name="description" content="SPT 计算器、3520 合并门槛计算器、美国遗产税暴露估算器、加拿大视同处置估算器、BC 遗嘱认证费；全部按讲座正本规格实现并用案例 A/B/P 自动核对。"><link rel="canonical" href="https://veryvisa.github.io/cross-border-wealth-site/tools/"><meta property="og:title" content="工具：计算器与清单"><meta property="og:description" content="SPT 计算器、3520 合并门槛计算器、美国遗产税暴露估算器、加拿大视同处置估算器、BC 遗嘱认证费；全部按讲座正本规格实现并用案例 A/B/P 自动核对。"><meta property="og:image" content="https://veryvisa.github.io/cross-border-wealth-site/img/tools.jpg"><meta property="og:type" content="article"><link rel="icon" href="/cross-border-wealth-site/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/cross-border-wealth-site/_astro/Base.Dt5ikT9u.css"></head><body><a class="skip" href="#main">跳到正文</a><div class="utility"><div class="wrap">《美加跨境家庭财富保护与传承》讲座系列 · 规则核对基准日 2026-09-19 · 只讲选项、条件与风险，不出个案意见</div></div><header class="top"><div class="wrap top-in"><a class="brand" href="/cross-border-wealth-site/"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span><b>微出国 · 跨境家庭财富</b><small>身份 → 资产在哪国 → 要什么文件与申报</small></span></a><button class="menu-btn" aria-label="打开菜单" aria-expanded="false" onclick="document.body.classList.toggle('nav-open');this.setAttribute('aria-expanded',document.body.classList.contains('nav-open'))">菜单</button><nav aria-label="主要导航"><ul><li><a href="/cross-border-wealth-site/lectures/">十讲</a></li><li><a href="/cross-border-wealth-site/rules/">规则速查</a></li><li><a href="/cross-border-wealth-site/tools/" class="on">工具</a></li><li><a href="/cross-border-wealth-site/case/">陈家案例</a></li><li><a href="/cross-border-wealth-site/checklists/">清单与转介</a></li><li><a href="/cross-border-wealth-site/sources/">来源</a></li></ul></nav></div></header><main class="wrap" id="main"><p class="crumb"><a href="/cross-border-wealth-site/">首页</a> › 工具</p><div class="lecture-head"><div><span class="kicker">教学示意 · 不是申报软件</span><h1>计算器与清单</h1><p class="lead">五个计算器按正本第 6.3 节规格实现；每次构建都用正本给出的案例 A、B、P 自动核对（对不上就不发布）。忽略汇率、扣除与配偶抵免；税率表与门槛须在讲前回官方法条核对。</p></div><figure><img src="/cross-border-wealth-site/img/tools.jpg" alt="方格纸上的黄铜计算尺、圆规与木尺" width="1536" height="1024"></figure></div><nav class="toc" aria-label="工具"><a href="#spt">SPT 计算器</a><a href="#f3520">3520 合并门槛</a><a href="#estate">遗产税暴露</a><a href="#deemed">视同处置与综合税负</a><a href="#probate">BC 遗嘱认证费</a><a href="#calendar">年度日历</a></nav><section class="tool" id="spt"><h2>SPT 计算器（S1）</h2><p class="note">学生豁免：F/J/M/Q 学生按「任何一部分日历年」计，共 5 个日历年不计入实质居住测试（SPT）；豁免年的天数不计。公式：当年 ≥31 天，且 当年 + 前 1 年 ×1/3 + 前 2 年 ×1/6 ≥183。<span class="st ok">✅<i>已核对</i></span> O5</p><div class="form"><label>入学（首次以学生身份入境）年份<input id="spt-entry" type="number" value="2024" min="1990" max="2060"></label><label>要判断的年份<input id="spt-year" type="number" value="2029" min="1990" max="2070"></label><label>该年在美天数<input id="spt-d0" type="number" value="300" min="0" max="366"></label><label>前 1 年在美天数<input id="spt-d1" type="number" value="300" min="0" max="366"></label><label>前 2 年在美天数<input id="spt-d2" type="number" value="300" min="0" max="366"></label></div><div class="out" id="spt-out"></div><p class="note">居民起算日、closer connection、绿卡测试与首年 dual-status 须用 IRS Pub. 519 复核；第 6 年起继续豁免须证明无永久居留意图并实质遵守身份。</p></section><section class="tool" id="f3520"><h2>3520 合并门槛计算器（S2）</h2><p class="note">义务人是 U.S. person；当年从非居民外国人或外国遗产收到合计 >US$100,000（关联人合并）须报 Part IV，>US$5,000 的每笔逐项列明；直接付给学校的学费、付给医疗机构的医疗费不计；来自外国公司／合伙的门槛 2026 年 US$20,573（<span class="st warn">🟡<i>须复核</i></span> 以 Rev. Proc. 2025-32 为准）。<span class="st ok">✅<i>已核对</i></span> O1</p><div class="form"><label>接收人当年是否 U.S. person<select id="g-us"><option value="1">是（美国公民／税务居民）</option><option value="0">否（仍为非居民）</option></select></label><label>外国公司／合伙门槛（US$）<input id="g-ent" type="number" value="20573"></label></div><div class="rows" id="g-rows"></div><div class="btn-row"><button type="button" class="ghost" id="g-add">＋ 加一笔</button><button type="button" class="ghost" id="g-case1">载入案例 1（母 85,000 ＋ 父 40,000）</button><button type="button" class="ghost" id="g-case2">案例 2（直付学费 + 50,000）</button></div><div class="out" id="g-out"></div><p class="note">分批汇款按年度并合并关联人计算，分批不改变结论；3520 是信息申报，不计算税款；到期日为纳税年度结束后第 4 个月 15 日（随所得税延期最迟 10/15），单独寄送。</p></section><section class="tool" id="estate"><h2>美国遗产税暴露估算器（S4／S5）</h2><p class="note">美国公司股票属美国 situs，与券商所在地无关；NRNC 申报门槛 US$60,000，国内法信用额 US$13,000。加拿大居民（非美国公民）可主张条约比例抵免：抵免 = max(13,000, 统一抵免 × 美国 situs ÷ 全球遗产)，2026 年统一抵免按 §2001(c) 自算为 US$5,945,800（<span class="st warn">🟡<i>须复核</i></span>）。主张条约抵免须提交 706-NA 并披露全球遗产。</p><div class="form"><label>身份<select id="e-status"><option value="ca">加拿大居民、非美国公民（条约）</option><option value="nrnc">其他 NRNC（仅国内法）</option></select></label><label>全球遗产 W（US$）<input id="e-w" type="number" value="8000000" min="0" step="1000"></label><label>美国 situs 资产 S（US$）<input id="e-s" type="number" value="1200000" min="0" step="1000"></label><label>美国公民基本免税额（当年）<input id="e-ex" type="number" value="15000000" step="10000"></label></div><div class="btn-row"><button type="button" class="ghost" data-case="8000000,1200000">案例 A（陈家）</button><button type="button" class="ghost" data-case="25000000,3000000">案例 B</button><button type="button" class="ghost" data-case="6000000,1000000">案例 P</button></div><div class="out" id="e-out"></div><p class="note">忽略扣除与配偶抵免；配偶继承、州遗产税／继承税、QDOT 与未申报的后果须另核。</p></section><section class="tool" id="deemed"><h2>加拿大视同处置估算器与综合税负（S5）</h2><p class="note">死亡时按公允价值视同处置（ITA s.70(5)）<span class="st ok">✅<i>已核对</i></span>；计入率 1/2 <span class="st warn">🟡<i>须复核</i></span>；边际税率按当年联邦与 BC 税表 <span class="st warn">🟡<i>须复核</i></span>。综合税负％ =（美国税 + 加拿大税）÷ FMV。</p><div class="form"><label>公允价值 FMV（US$）<input id="d-fmv" type="number" value="1000000" step="1000"></label><label>成本 ACB（US$）<input id="d-acb" type="number" value="400000" step="1000"></label><label>边际税率（%）<input id="d-rate" type="number" value="53.5" step="0.1"></label><label>计入率<select id="d-inc"><option value="0.5">1/2</option><option value="0.6667">2/3（假设情景）</option></select></label><label>美国遗产税（US$，可从上面估算器带入）<input id="d-us" type="number" value="0" step="100"></label></div><div class="out" id="d-out"></div></section><section class="tool" id="probate"><h2>BC 遗嘱认证费（S5）</h2><p class="note">C$25,000 以下免；C$25,000–50,000 部分每 C$1,000 收 C$6；C$50,000 以上每 C$1,000 收 C$14；另有约 C$200 申请费；仅对 BC 境内资产及经遗产代理人转移的资产计。<span class="st ok">✅<i>已核对</i></span> O12</p><div class="form"><label>经遗嘱认证的 BC 资产总值（C$）<input id="p-v" type="number" value="2000000" step="1000"></label></div><div class="out" id="p-out"></div></section><section class="tool" id="calendar"><h2>年度申报日历（S9）</h2><p class="note">2027 年日期按现行规则推算，须届时核对 <span class="st warn">🟡<i>须复核</i></span>。勾选家庭成员的情况，生成适用事项。</p><div class="form"><label><span><input type="checkbox" id="c-us" checked> 家中有美国税务居民（含已成为居民的子女）</span></label><label><span><input type="checkbox" id="c-student" checked> 家中有 F-1／J-1 豁免期学生</span></label><label><span><input type="checkbox" id="c-gift" checked> 未来 12 个月可能有 >US$100,000 的跨境赠与给美国人</span></label><label><span><input type="checkbox" id="c-ca" checked> 家中有加拿大税务居民</span></label><label><span><input type="checkbox" id="c-t1135" checked> 加拿大居民持有成本 >C$100,000 的特定外国财产（含经加拿大券商持有的美股）</span></label><label><span><input type="checkbox" id="c-trust"> 家中有明示信托或裸信托</span></label><label><span><input type="checkbox" id="c-situs" checked> 持有美国 situs 资产 >US$60,000</span></label></div><div class="out" id="c-out"></div></section><script type="module">const calc = "/cross-border-wealth-site/js/calc.js";
+
+const M = await import(calc);
+const $ = (id) => document.getElementById(id);
+const num = (id) => Number($(id).value) || 0;
+const money = (n, cur = 'US$') => `${cur}${M.fmt(n)}`;
+
+// SPT
+function runSpt() {
+  const entry = num('spt-entry'), y = num('spt-year');
+  const ex = M.exemptYears(entry);
+  const rows = [y - 2, y - 1, y].map((yr, i) => ({ year: yr, days: num(['spt-d2', 'spt-d1', 'spt-d0'][i]), exempt: ex.includes(yr) }));
+  const r = M.spt(rows);
+  const exNote = ex.includes(y) ? `<b>${y} 年仍在学生豁免期</b>（豁免年 ${ex[0]}–${ex[4]}），该年天数不计入 SPT；` : `豁免年 ${ex[0]}–${ex[4]}，${y} 年天数计入；`;
+  $('spt-out').innerHTML = `${exNote}加权天数 = ${rows[2].exempt ? 0 : rows[2].days} + ${rows[1].exempt ? 0 : rows[1].days}÷3 + ${rows[0].exempt ? 0 : rows[0].days}÷6 = <b>${r.weighted}</b>；当年计入 ${r.current} 天 → <b>${r.meets ? '满足 SPT（该年已进入美国税务体系，居民起算日用 Pub. 519 复核）' : '不满足 SPT'}</b>。`;
+}
+for (const id of ['spt-entry', 'spt-year', 'spt-d0', 'spt-d1', 'spt-d2']) $(id).addEventListener('input', runSpt);
+runSpt();
+
+// 3520
+let gifts = [{ donor: '母亲', kind: 'individual', amount: 85000, direct: false }, { donor: '父亲', kind: 'individual', amount: 40000, direct: false }];
+function drawGifts() {
+  const kinds = [['individual', '个人（非居民外国人）'], ['estate', '外国遗产'], ['company', '外国公司'], ['partnership', '外国合伙']];
+  $('g-rows').innerHTML = gifts.map((g, i) => `<input data-i="${i}" data-k="donor" value="${g.donor}" aria-label="赠与人"/><select data-i="${i}" data-k="kind" aria-label="赠与人类型">${kinds.map(([v, t]) => `<option value="${v}"${g.kind === v ? ' selected' : ''}>${t}</option>`).join('')}</select><input data-i="${i}" data-k="amount" type="number" value="${g.amount}" aria-label="金额 US$"/><label style="flex-direction:row;align-items:center;gap:6px"><input data-i="${i}" data-k="direct" type="checkbox"${g.direct ? ' checked' : ''}/>直付学费／医疗</label>`).join('');
+  for (const el of $('g-rows').querySelectorAll('[data-i]')) el.addEventListener('input', (e) => { const g = gifts[+el.dataset.i]; const k = el.dataset.k; g[k] = k === 'direct' ? el.checked : (k === 'amount' ? Number(el.value) || 0 : el.value); runGifts(); });
+  runGifts();
+}
+function runGifts() {
+  const r = M.form3520(gifts, { entityThreshold: num('g-ent'), recipientIsUSPerson: $('g-us').value === '1' });
+  const parts = [];
+  if (!r.recipientIsUSPerson) parts.push('接收人仍为非居民：通常<b>不是</b> 3520 的申报人（成为美国税务居民之后所收赠与才落入）。');
+  parts.push(`个人／遗产类合并 ${money(r.sumIndiv)}（已剔除直付项 ${money(r.excluded)}）→ ${r.partIV ? '<b>超过 US$100,000，须报 Part IV</b>' : '未超过 US$100,000'}${r.itemized.length ? `；>US$5,000 的须逐项列明：${r.itemized.map(x => `${x.donor} ${money(x.amount)}`).join('、')}` : ''}。`);
+  if (r.sumEnt > 0) parts.push(`外国公司／合伙类合并 ${money(r.sumEnt)} → ${r.entityHit ? '<b>超过当年门槛，须申报，且可能被重新定性</b>' : '未超过当年门槛'}。`);
+  $('g-out').innerHTML = parts.join('<br/>');
+}
+$('g-add').onclick = () => { gifts.push({ donor: '', kind: 'individual', amount: 0, direct: false }); drawGifts(); };
+$('g-case1').onclick = () => { gifts = [{ donor: '母亲', kind: 'individual', amount: 85000, direct: false }, { donor: '父亲', kind: 'individual', amount: 40000, direct: false }]; drawGifts(); };
+$('g-case2').onclick = () => { gifts = [{ donor: '父母→学校', kind: 'individual', amount: 60000, direct: true }, { donor: '父亲', kind: 'individual', amount: 50000, direct: false }]; drawGifts(); };
+$('g-us').addEventListener('change', runGifts); $('g-ent').addEventListener('input', runGifts);
+drawGifts();
+
+// 遗产税
+function runEstate() {
+  const r = M.estateExposure({ W: num('e-w'), S: num('e-s'), status: $('e-status').value, exclusion: num('e-ex') });
+  $('e-out').innerHTML = `${r.mustFile ? '美国 situs 资产 >US$60,000 → <b>须报 706-NA</b>（死亡后 9 个月内，4768 可展期 6 个月）。' : '美国 situs 资产 ≤US$60,000，国内法下通常无须申报（仍应核对赠与与条约条件）。'}<br/>税前（§2001(c)）：<b>${money(r.pre)}</b>；抵免：<b>${money(r.credit)}</b>${r.treaty > 13000 ? `（条约比例抵免 ${M.fmt(M.unifiedCredit(num('e-ex')))} × ${M.fmt(num('e-s'))} ÷ ${M.fmt(num('e-w'))}）` : '（国内法信用额）'}；应缴：<b>${money(r.due)}</b>${r.due === 0 && r.mustFile ? '（仍须申报并主张条约）' : ''}。<br/><span class="note">${r.note}${r.smallEstate ? '；全球遗产 ≤US$1,200,000，另核小遗产条款' : ''}。</span>`;
+  $('d-us').value = Math.round(r.due); runDeemed();
+}
+for (const id of ['e-w', 'e-s', 'e-status', 'e-ex']) $(id).addEventListener('input', runEstate);
+for (const b of document.querySelectorAll('[data-case]')) b.onclick = () => { const [w, s] = b.dataset.case.split(','); $('e-w').value = w; $('e-s').value = s; runEstate(); };
+
+// 视同处置
+function runDeemed() {
+  const d = M.deemedDisposition({ fmv: num('d-fmv'), acb: num('d-acb'), rate: num('d-rate') / 100, inclusion: Number($('d-inc').value) });
+  const pct = M.combinedBurden({ usTax: num('d-us'), caTax: d.tax, fmv: num('d-fmv') }) * 100;
+  $('d-out').innerHTML = `收益 ${money(d.gain)} × 计入率 → 计入 ${money(d.included)} × 边际税率 ${num('d-rate')}% = 加拿大税 <b>${money(d.tax)}</b>；美国遗产税 ${money(num('d-us'))} → 综合税负 <b>约 ${pct.toFixed(1)}%</b> of FMV。<br/><span class="note">「60%+」只可能出现在特定前提下（如无条约抵免且高成本基础缺失），不是通则；用公式与数字回答，不用口号。</span>`;
+}
+for (const id of ['d-fmv', 'd-acb', 'd-rate', 'd-inc', 'd-us']) $(id).addEventListener('input', runDeemed);
+runEstate();
+
+// 遗嘱认证费
+function runProbate() { const v = num('p-v'); const f = M.bcProbateFee(v); $('p-out').innerHTML = `遗嘱认证费 <b>C$${M.fmt(f)}</b>（另有约 C$200 申请费）。${v > 50000 ? `算法：25,000–50,000 部分 25 × 6 = 150；50,000 以上 ${M.fmt(Math.ceil((v - 50000) / 1000))} × 14 = ${M.fmt(Math.ceil((v - 50000) / 1000) * 14)}。` : ''}`; }
+$('p-v').addEventListener('input', runProbate); runProbate();
+
+// 年度日历
+function runCal() {
+  const items = [];
+  if ($('c-us').checked) items.push(['2027-04-15', '美国 1040；FBAR（自动延至 10/15）；3520（随 1040 延期最迟 10/15，单独寄送）；8938 随 1040', '✅／🟡']);
+  if ($('c-student').checked) items.push(['2027-04-15 或 06-15', 'Form 8843：有须预扣的美国工资并报 1040-NR 者随 1040-NR 4/15；无此类工资或无需报税者单独寄送 6/15', '🟡']);
+  if ($('c-gift').checked) items.push(['赠与当年结束后第 4 个月 15 日', '接收人（U.S. person）报 3520 Part IV；赠与函、资金来源、银行流水当年留存', '✅']);
+  if ($('c-ca').checked) items.push(['2027-04-30', '加拿大 T1（自雇者 6/15，税款仍 4/30）', '🟡']);
+  if ($('c-t1135').checked) items.push(['2027-04-30', 'T1135 与 T1 同日；成本按 ACB 计', '✅']);
+  if ($('c-trust').checked) items.push(['2027-03-31', 'T3 + Schedule 15（12/31 年终者 90 天内）；首批 2026 年度裸信托申报', '✅']);
+  if ($('c-situs').checked) items.push(['死亡后 9 个月', '706-NA（4768 可展期 6 个月）；条约抵免以申报为前提；转移证书', '✅']);
+  if ($('c-ca').checked) items.push(['加拿大死亡后', '终期 T1：1/1–10/31 死亡 → 次年 4/30；11/1–12/31 死亡 → 死后 6 个月', '🟡']);
+  items.push(['2026-12-31', '美国人年度赠与免税额 US$19,000／人（2026）；加拿大年内实现事项', '🟡']);
+  $('c-out').innerHTML = `<div class="tbl"><table><thead><tr><th>日期</th><th>事项</th><th>状态</th></tr></thead><tbody>${items.map(([d, t, s]) => `<tr><td>${d}</td><td>${t}</td><td>${s}</td></tr>`).join('')}</tbody></table></div><span class="note">建议每年一次 30 分钟家庭会议：身份变化、资产变化、文件到期、本年日历与责任人、需要转介的问题。</span>`;
+}
+for (const id of ['c-us', 'c-student', 'c-gift', 'c-ca', 'c-t1135', 'c-trust', 'c-situs']) $(id).addEventListener('change', runCal);
+runCal();
+</script></main><footer class="foot"><div class="wrap foot-grid"><div><b>微出国 · 跨境家庭财富</b><p>本讲座为教育性内容，不构成法律、税务、投资、保险或移民意见。规则截至 2026-09-19，请以官方来源及持牌专业人士的意见为准。</p><p class="small">数字、条文与截止日在每场开讲前回官方来源逐项复核；涉及个案，须由持有相应执业资格的律师、会计师或持牌顾问确认。</p></div><div><b>学习路径</b><a href="/cross-border-wealth-site/lectures/">十讲总览</a><a href="/cross-border-wealth-site/rules/">官方规则速查</a><a href="/cross-border-wealth-site/tools/">计算器与清单</a><a href="/cross-border-wealth-site/decks/">首期课件下载</a></div><div><b>来源与边界</b><a href="/cross-border-wealth-site/sources/">参考来源（官方优先）</a><a href="/cross-border-wealth-site/checklists/">讲前必核与转介地图</a><a href="/cross-border-wealth-site/about/">关于本站</a><a href="https://veryvisa.github.io/">微出国 · 门户</a><a href="https://bbs.fcgvisa.com">飞出国论坛</a></div></div></footer></body></html>
